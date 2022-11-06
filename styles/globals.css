@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(90deg, #380036 20%, #0cbaba 70%);
+  background: linear-gradient(90deg, #2bc0e4 20%, #eaecc6 70%);
 }
 
 ::-webkit-scrollbar {

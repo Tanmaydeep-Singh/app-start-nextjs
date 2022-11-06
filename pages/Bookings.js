@@ -7,23 +7,26 @@ import { signout } from "../firebase";
 import { useState } from "react";
 
 import { useRouter } from "next/router";
-import DefaultLayout from "../components/layout/DefaultLayout";
-// import Home from "./Home";
+import BookingLayout from "../components/layout/BookingLayout";
 
 const BookingsSm = () => {
+  const navigate = useRouter().push;
 
-  const navigate =  useRouter().push;
-  
   const [go, setGo] = useState(false);
   const handlesignout = (e) => {
     e.preventDefault();
     signout();
     console.log("Sign out successful !! ");
-    navigate('/');
+    navigate("/");
   };
 
   const sidebar = () => {
     setGo(!go);
+  };
+
+  const handleOrders = (e) => {
+    e.preventDefault();
+    navigate("/Orders");
   };
 
   return (
@@ -31,10 +34,13 @@ const BookingsSm = () => {
       <GiHamburgerMenu onClick={sidebar} />
       <div className="flex overflow-hidden">
         <div className={go ? "w-10 bg-gray-400 justify-center" : "hidden"}>
-          <div className="flex my-5 w-10 align-center justify-center flex-wrap gap-2 text-sm hover:bg-gray-200">
+          <div
+            
+            className=" flex my-5 w-10 align-center justify-center flex-wrap gap-2 text-sm hover:bg-gray-200"
+          >
             <FaUserAlt className="m-auto mx-0" />
           </div>
-          <div className="flex my-5  w-10 align-center justify-center flex-wrap gap-2 text-sm hover:bg-gray-200">
+          <div onClick={handleOrders} className="flex my-5 cursor-pointer w-10 align-center justify-center flex-wrap gap-2 text-sm hover:bg-gray-200">
             <AiFillSetting className="m-auto mx-0" />
           </div>
           <div className="flex my-5  w-10 align-center justify-center flex-wrap gap-2 text-sm hover:bg-gray-200">
@@ -42,7 +48,7 @@ const BookingsSm = () => {
           </div>
           <div
             onClick={handlesignout}
-            className="flex my-5  w-10 align-center justify-center flex-wrap gap-2 text-sm  hover:bg-gray-200"
+            className="cursor-pointer flex my-5  w-10 align-center justify-center flex-wrap gap-2 text-sm  hover:bg-gray-200"
           >
             <FaSignOutAlt className="m-auto mx-0 " />
           </div>
@@ -179,12 +185,17 @@ const BookingsSm = () => {
 };
 
 const BookingsLg = () => {
-  const navigate =  useRouter().push;
+  const navigate = useRouter().push;
   const handlesignout = (e) => {
     e.preventDefault();
     signout();
     console.log("Sign out successful !! ");
-    navigate(-1);
+    navigate("/");
+  };
+
+  const handleOrders = (e) => {
+    e.preventDefault();
+    navigate("/Orders");
   };
 
   return (
@@ -192,20 +203,23 @@ const BookingsLg = () => {
       <div className="flex">
         <div className="px-6 fixed h-80vh bg-gray-500 rounded-tr-md rounded-br-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 border border-l-0 border-gray-100 justify-center rounded-md ">
           {/* <div className="px-6 fixed h-80vh bg-white rounded-tr-md rounded-br-md border-l-0 border-gray-100 justify-center rounded-md "> */}
-          <div className="flex m-5 align-center justify-center flex-wrap gap-2 text-lg hover:bg-gray-200">
+          <div
+           
+            className="  flex m-5 align-center justify-center flex-wrap gap-2 text-lg hover:bg-gray-200"
+          >
             <FaUserAlt className="m-auto mx-0" /> ORDERS
           </div>
-          <div className="flex my-5 align-center justify-center flex-wrap gap-2 text-lg hover:bg-gray-200">
-            <AiFillSetting className="m-auto mx-0" /> SETTINGS
+          <div  onClick={handleOrders} className=" cursor-pointer flex my-5 align-center justify-center flex-wrap gap-2 text-lg hover:bg-gray-200">
+            <AiFillSetting className="m-auto mx-0" /> PROVIDERS
           </div>
           <div className="flex my-5 align-center justify-center flex-wrap gap-2 text-lg hover:bg-gray-200">
             <FaWallet className="m-auto mx-0" /> WALLET
           </div>
           <div
             onClick={handlesignout}
-            className="flex my-5 align-center justify-center flex-wrap gap-2 text-lg  hover:bg-gray-200"
+            className="cursor-pointer flex my-5 align-center justify-center flex-wrap gap-2 text-lg  hover:bg-gray-200"
           >
-            <FaSignOutAlt className="m-auto mx-0 " /> Logout
+            <FaSignOutAlt className="m-auto mx-0 " /> LOGOUT
           </div>
         </div>
 
@@ -352,4 +366,4 @@ const Bookings = () => {
   );
 };
 
-export default DefaultLayout(Bookings);
+export default BookingLayout(Bookings);

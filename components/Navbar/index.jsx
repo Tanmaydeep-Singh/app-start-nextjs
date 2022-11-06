@@ -1,5 +1,7 @@
+
 import React, { useState } from "react";
 import { FaUserAlt } from "react-icons/fa";
+
 
 // components
 import Signin from "../Auth/Signin";
@@ -29,7 +31,11 @@ const MobileNav = ({
   return (
     <div className=" flex w-full items-center justify-between lg:hidden">
       <div className="w-28">
-        <img src="" alt="Logo" className="w-full h-full" />
+        <img
+          src="https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg"
+          alt="Logo"
+          className="w-full h-full"
+        />
       </div>
       <div className="flex items-center gap-3 relative">
         <button className="bg-parkit-200 text-white py-2 px-3 rounded-full">
@@ -99,7 +105,11 @@ const LargeNav = ({
     <div className="w-full items-center justify-between hidden lg:flex px-14">
       <div className="gap-4 items-center justify-around flex">
         <div className="w-20">
-          <img src="" alt="Logo" className="w-full h-full" />
+          <img
+            src="https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg"
+            alt="Logo"
+            className="w-full h-full"
+          />
         </div>
       </div>
 

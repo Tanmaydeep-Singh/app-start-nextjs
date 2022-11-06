@@ -1,69 +1,35 @@
 import React from "react";
 import DefaultLayout from "../components/layout/DefaultLayout";
 import ProviderCard from "../components/ProviderCard";
+import Slider from "react-slick";
+import Image from "next/image";
 
 function Home() {
+  
+  const images = [
+    "https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg",
+    "https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg",
+    "https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg",
+    "https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg",
+  ];
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div>
-      <div className=" h-547.2   bg-gradient-to-r from-cyan-500 to-blue-500">
-      </div>
+      <Slider {...settings}>
+        {images.map((image) => (
+          <>
+            <Image src={image} width={100} height={100} />
+          </>
+        ))}
+      </Slider>
 
-      <div className="w-10/12 m-auto  grid grid-cols-1  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-items-center">
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-        <ProviderCard
-          img="https://picsum.photos/200/300"
-          name="Tanmaydeep"
-          walletAddress="1234567890"
-          location="here"
-        />
-      </div>
+      
     </div>
   );
 }
