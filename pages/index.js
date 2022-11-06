@@ -1,4 +1,3 @@
-
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +13,7 @@ function Home() {
   return (
     <div>
       <div className=" h-60vh w-60vh  ">
-        <Swiper 
+        <Swiper
           slidesPerView={4}
           spaceBetween={30}
           slidesPerGroup={4}
@@ -31,18 +30,18 @@ function Home() {
             {" "}
             <ProviderCard
               img="https://picsum.photos/200/300"
-              name="Tanmaydeep"
-              walletAddress="1234567890"
-              location="here"
+              name="prabhas"
+              walletAddress="1654567890"
+              location="G6G4+9MP, Block D, Saket, New Delhi, Delhi 110017"
             />
           </SwiperSlide>
-           <SwiperSlide>
+          <SwiperSlide>
             {" "}
             <ProviderCard
               img="https://picsum.photos/200/300"
               name="Tanmaydeep"
-              walletAddress="1234567890"
-              location="here"
+              walletAddress="123456567890"
+              location="G6G4+XHV, Press Enclave Marg, Hauz Rani, Malviya Nagar, New Delhi, Delhi 110017"
             />
           </SwiperSlide>
 
@@ -50,54 +49,54 @@ function Home() {
             {" "}
             <ProviderCard
               img="https://picsum.photos/200/300"
-              name="Tanmaydeep"
-              walletAddress="1234567890"
-              location="here"
+              name="rahul"
+              walletAddress="1234923567890"
+              location="J-287, Saket Rd, Block J, Saket, New Delhi, Delhi 110017"
             />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
             <ProviderCard
               img="https://picsum.photos/200/300"
-              name="Tanmaydeep"
-              walletAddress="1234567890"
-              location="here"
+              name="virat singh"
+              walletAddress="123982567890"
+              location="Community Center, Goswami Girdhari Lal Marg, Industrial Area Phase I, Block B, Naraina Industrial Area Phase 1, Naraina, New Delhi, Delhi 110028"
             />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
             <ProviderCard
               img="https://picsum.photos/200/300"
-              name="Tanmaydeep"
-              walletAddress="1234567890"
-              location="here"
+              name="shivansh grover"
+              walletAddress="1289234567890"
+              location="J4PW+CHQ, Krishi Kunj, Inder Puri, New Delhi, Delhi 110012"
             />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
             <ProviderCard
               img="https://picsum.photos/200/300"
-              name="Tanmaydeep"
-              walletAddress="1234567890"
-              location="here"
+              name="bhavika"
+              walletAddress="181234567890"
+              location="E-195, E Block Rd, Block E, Naraina Vihar, Naraina, New Delhi, Delhi 110028"
             />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
             <ProviderCard
               img="https://picsum.photos/200/300"
-              name="Tanmaydeep"
+              name="chirag muji"
               walletAddress="1234567890"
-              location="here"
+              location="Shop No.9A, 50 Futa Road, Nihal Vihar, Nangloi, Delhi, 110041"
             />
           </SwiperSlide>
           <SwiperSlide>
             {" "}
             <ProviderCard
               img="https://picsum.photos/200/300"
-              name="Tanmaydeep"
+              name="birji lala"
               walletAddress="1234567890"
-              location="here"
+              location="RZ B-4, Nala Rd, Nihal Vihar, Nangloi, New Delhi, Delhi 110041"
             />
           </SwiperSlide>
         </Swiper>
