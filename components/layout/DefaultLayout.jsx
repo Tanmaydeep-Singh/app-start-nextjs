@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar/index";
 
-const DefaultLayout =
+const defaultLayout =
   (Component) =>
   ({ ...props }) => {
     return (
@@ -14,4 +14,4 @@ const DefaultLayout =
     );
   };
 
-export default DefaultLayout;
+export default defaultLayout;

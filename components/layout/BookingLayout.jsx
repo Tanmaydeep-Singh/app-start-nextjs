@@ -4,7 +4,7 @@ import React from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar/booking_navbar";
 
-const BookingLayout =
+const bookingLayout =
   (Component) =>
   ({ ...props }) => {
     return (
@@ -16,4 +16,4 @@ const BookingLayout =
     );
   };
 
-export default BookingLayout;
+export default bookingLayout;
