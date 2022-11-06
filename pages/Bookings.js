@@ -10,6 +10,20 @@ import { useRouter } from "next/router";
 import BookingLayout from "../components/layout/BookingLayout";
 
 const BookingsSm = () => {
+  
+  const [id,setId] = useState('ak_dArxCkAsk1mZB1L9CX3cdz1GDN4hN84L3Q8dMLHN4v8cU85TF');
+  
+  const walletConnect = async(e) =>{
+    e.preventDefault();
+
+    console.log("clicked");
+    const resp = await fetch('https://mainnet.aeternity.io/v3/key-blocks/current');
+    const result = await resp.json();
+    console.log(result.beneficiary)
+    setId(result.beneficiary);
+    alert(id);
+    
+  }
   const navigate = useRouter().push;
 
   const [go, setGo] = useState(false);
@@ -43,7 +57,7 @@ const BookingsSm = () => {
           <div onClick={handleOrders} className="flex my-5 cursor-pointer w-10 align-center justify-center flex-wrap gap-2 text-sm hover:bg-gray-200">
             <AiFillSetting className="m-auto mx-0" />
           </div>
-          <div className="flex my-5  w-10 align-center justify-center flex-wrap gap-2 text-sm hover:bg-gray-200">
+          <div className="flex my-5  w-10 align-center justify-center flex-wrap gap-2 text-sm hover:bg-gray-200" onClick={walletConnect}>
             <FaWallet className="m-auto mx-0" />
           </div>
           <div
@@ -192,6 +206,19 @@ const BookingsLg = () => {
     console.log("Sign out successful !! ");
     navigate("/");
   };
+  
+  const [id,setId] = useState('ak_dArxCkAsk1mZB1L9CX3cdz1GDN4hN84L3Q8dMLHN4v8cU85TF');
+  
+  const walletConnect = async(e) =>{
+    e.preventDefault();
+
+    console.log("clicked");
+    const resp = await fetch('https://mainnet.aeternity.io/v3/key-blocks/current');
+    const result = await resp.json();
+    console.log(result.beneficiary)
+    setId(result.beneficiary);
+    alert(id);
+  }
 
   const handleOrders = (e) => {
     e.preventDefault();
@@ -212,7 +239,7 @@ const BookingsLg = () => {
           <div  onClick={handleOrders} className=" cursor-pointer flex my-5 align-center justify-center flex-wrap gap-2 text-lg hover:bg-gray-200">
             <AiFillSetting className="m-auto mx-0" /> PROVIDERS
           </div>
-          <div className="flex my-5 align-center justify-center flex-wrap gap-2 text-lg hover:bg-gray-200">
+          <div className="flex my-5 align-center justify-center flex-wrap gap-2 text-lg hover:bg-gray-200" onClick={walletConnect}>
             <FaWallet className="m-auto mx-0" /> WALLET
           </div>
           <div

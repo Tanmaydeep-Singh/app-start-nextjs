@@ -1,35 +1,164 @@
-import React from "react";
+
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 import DefaultLayout from "../components/layout/DefaultLayout";
 import ProviderCard from "../components/ProviderCard";
-import Slider from "react-slick";
-import Image from "next/image";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper";
 
 function Home() {
-  
-  const images = [
-    "https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg",
-    "https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg",
-    "https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg",
-    "https://res.cloudinary.com/dkfzsyen9/image/upload/v1667712474/logo_vtoaqm.jpg",
-  ];
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <div>
-      <Slider {...settings}>
-        {images.map((image) => (
-          <>
-            <Image src={image} width={100} height={100} />
-          </>
-        ))}
-      </Slider>
+      <div className=" h-60vh w-60vh  ">
+        <Swiper 
+          slidesPerView={4}
+          spaceBetween={30}
+          slidesPerGroup={4}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          pagination={{
+            clickable: true,
+          }}
+          // navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper w-4/5 justify-center justify-items-center "
+        >
+          <SwiperSlide>
+            {" "}
+            <ProviderCard
+              img="https://picsum.photos/200/300"
+              name="Tanmaydeep"
+              walletAddress="1234567890"
+              location="here"
+            />
+          </SwiperSlide>
+           <SwiperSlide>
+            {" "}
+            <ProviderCard
+              img="https://picsum.photos/200/300"
+              name="Tanmaydeep"
+              walletAddress="1234567890"
+              location="here"
+            />
+          </SwiperSlide>
 
-      
+          <SwiperSlide>
+            {" "}
+            <ProviderCard
+              img="https://picsum.photos/200/300"
+              name="Tanmaydeep"
+              walletAddress="1234567890"
+              location="here"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            {" "}
+            <ProviderCard
+              img="https://picsum.photos/200/300"
+              name="Tanmaydeep"
+              walletAddress="1234567890"
+              location="here"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            {" "}
+            <ProviderCard
+              img="https://picsum.photos/200/300"
+              name="Tanmaydeep"
+              walletAddress="1234567890"
+              location="here"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            {" "}
+            <ProviderCard
+              img="https://picsum.photos/200/300"
+              name="Tanmaydeep"
+              walletAddress="1234567890"
+              location="here"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            {" "}
+            <ProviderCard
+              img="https://picsum.photos/200/300"
+              name="Tanmaydeep"
+              walletAddress="1234567890"
+              location="here"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            {" "}
+            <ProviderCard
+              img="https://picsum.photos/200/300"
+              name="Tanmaydeep"
+              walletAddress="1234567890"
+              location="here"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+
+      {/* <div className="w-10/12 m-auto  grid grid-cols-1  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-items-center">
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+        <ProviderCard
+          img="https://picsum.photos/200/300"
+          name="Tanmaydeep"
+          walletAddress="1234567890"
+          location="here"
+        />
+      </div> */}
     </div>
   );
 }

@@ -19,6 +19,8 @@ module.exports = {
       height: {
         '547.2':'60vh',
         '80vh':'90vh',
+        '60vh':'77.5vh',
+
       },
       
       colors: {
